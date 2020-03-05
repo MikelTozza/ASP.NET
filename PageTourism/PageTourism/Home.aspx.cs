@@ -14,6 +14,7 @@ namespace PageTourism
         public BottomPage bottompage = new BottomPage();
         public IMG image = new IMG();
         public gallery imgGallery = new gallery();
+        public contactPage contact = new contactPage();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -170,7 +171,48 @@ namespace PageTourism
                 }
             }
             con.Close();
+            /////////////////////////////////////////////////////////////////////
 
+            SqlCommand cont = new SqlCommand("select * from contactText", con);
+            con.Open();
+            SqlDataReader contactReader = cont.ExecuteReader();
+            while (contactReader.Read())
+            {
+                switch (contactReader["Id"].ToString())
+                {
+                    case "1":
+                        contact.text1 = contactReader["text"].ToString();
+                        break;
+                    case "2":
+                        contact.text2 = contactReader["text"].ToString();
+                        break;
+                    case "3":
+                        contact.text3 = contactReader["text"].ToString();
+                        break;
+                    case "4":
+                        contact.text4 = contactReader["text"].ToString();
+                        break;
+                    case "5":
+                        contact.text5 = contactReader["text"].ToString();
+                        break;
+                    case "6":
+                        contact.text6 = contactReader["text"].ToString();
+                        break;
+                    case "7":
+                        contact.text7 = contactReader["text"].ToString();
+                        break;
+                    case "8":
+                        contact.text8 = contactReader["text"].ToString();
+                        break;
+                    case "9":
+                        contact.text9 = contactReader["text"].ToString();
+                        break;
+                    case "10":
+                        contact.text10 = contactReader["text"].ToString();
+                        break;
+                }
+            }
+            con.Close();
         }
 
 

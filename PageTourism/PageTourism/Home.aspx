@@ -23,7 +23,8 @@
                 </nav>
 
                 <div id="titleMenu">
-                    <span><%=titlemenu.Title%></span>
+                    
+                    <span style="float:left"><img src="images/icon2.png" style="width:5%; display:inline-block; position:relative;background:transparent;" /><%=titlemenu.Title%></span>
                 </div>
 
                 <div id="explorer">

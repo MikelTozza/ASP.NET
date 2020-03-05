@@ -4,7 +4,7 @@
 
 #main {
     margin: auto;
-    width: 80%;
+    width: 95%;
     height: 100%;
 }
 
@@ -32,10 +32,12 @@ li {
     font-size: 20px;
     font-family: "Times New Roman", Times, serif;
 }
-#GalleryBox{
-    height:600px;
-    width:100%;
-    background-color:lightgrey;
+#GalleryBox {
+    height: 600px;
+    width: 100%;
+    background-color: whitesmoke;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
 }
 #GalleryBoxtext {
     left: 30px;
@@ -53,7 +55,8 @@ li {
 .popup {
     width: 900px;
     margin: auto;
-    text-align: center
+    text-align: center;
+    display: inline;
 }
 
     .popup img {

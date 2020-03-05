@@ -119,6 +119,38 @@ namespace PageTourism
 
             }
         }
-       
+
+        public class contactPage
+        {
+            public string text1;
+            public string text2;
+            public string text3;
+            public string text4;
+            public string text5;
+            public string text6;
+            public string text7;
+            public string text8;
+            public string text9;
+            public string text10;
+
+                public contactPage()
+            {
+                text1 = "";
+                text2 = "";
+                text3 = "";
+                text4 = "";
+                text5 = "";
+                text6 = "";
+                text7 = "";
+                text8 = "";
+                text9 = "";
+                text10 = "";
+            }
+            
+
+
+
+        }
+
     }
 }

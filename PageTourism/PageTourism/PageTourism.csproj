@@ -76,10 +76,12 @@
     <Content Include="css\acceuil.css" />
     <Content Include="css\contact.css" />
     <Content Include="css\gallery.css" />
+    <Content Include="images\icon.png" />
     <Content Include="images\background.jpg" />
     <Content Include="images\Elephant.jpg" />
     <Content Include="images\FunnyHorse.jpeg" />
     <Content Include="images\giraffe.jpg" />
+    <Content Include="images\icon2.png" />
     <Content Include="images\kenya.jpg" />
     <Content Include="images\zebra.jpg" />
     <Content Include="js\contact.js" />

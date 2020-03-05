@@ -27,21 +27,21 @@
 
         <div class="container">
             <div style="text-align: center">
-                <h2>Contact Us</h2>
-                <p>MISCELLANEOUS INFORMATION: </p>
+                <h2><%=contact.text1 %></h2>
+                <p><%=contact.text2 %> </p>
             </div>
             <div class="row">
                 <div class="column">
-                    <p>ADDRESS:</p>
-                    <p>138 Atlantis Ln Kingsport Illinois 121154</p>
+                    <p style="text-decoration: underline;"><%=contact.text3 %> </p>
+                    <p><%=contact.text4 %> </p>
                     <br>
-                    <p>PHONES:</p>
-                    <p>800-2345-6789</p>
-                    <p>800-2345-6789</p>
+                    <p style="text-decoration: underline;"><%=contact.text5 %> </p>
+                    <p><%=contact.text6 %> </p>
+                    <p><%=contact.text7 %> </p>
                     <br />
-                    <p>EMAIL:</p>
-                    <p>mail@demolink.com</p>
-                    <p>Download information as vCard</p>
+                    <p style="text-decoration: underline;"><%=contact.text8 %> </p>
+                    <p><%=contact.text9 %> </p>
+                    <p><%=contact.text10 %> </p>
                 </div>
                 <div class="column">
                     <form>
