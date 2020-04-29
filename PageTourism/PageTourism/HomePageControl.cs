@@ -152,5 +152,44 @@ namespace PageTourism
 
         }
 
+        public class Voyage
+        {
+            public string titre1 { get; set; }
+            public string titre2 { get; set; }
+            public string titre3 { get; set; }
+            public string desc1 { get; set; }
+            public string desc2 { get; set; }
+            public string desc3 { get; set; }
+            public string prix1 { get; set; }
+            public string prix2 { get; set; }
+            public string prix3 { get; set; }
+            public string photo1 { get; set; }
+            public string photo2 { get; set; }
+            public string photo3 { get; set; }
+            public string check1 { get; set; }
+            public string check2 { get; set; }
+            public string check3 { get; set; }
+
+            public Voyage()
+            {
+                titre1 = "";
+                titre2 = "";
+                titre3 = "";
+                desc1 = "";
+                desc2 = "";
+                desc3 = "";
+                prix1 = "";
+                prix2 = "";
+                prix3 = "";
+                photo1 = "";
+                photo2 = "";
+                photo3 = "";
+                check1 = "";
+                check2 = "";
+                check3 = "";
+            }
+
+        }
+
     }
 }

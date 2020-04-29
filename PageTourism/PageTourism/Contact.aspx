@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li><a href="Home.aspx"><%=menu.About%></a></li>
-                <li><a href="Gallery.aspx"><%=menu.Pages%></a></li>
+                <li><a href="Voyages.aspx"><%=menu.Pages%></a></li>
                 <li><a href="Gallery.aspx"><%=menu.Gallery%></a></li>
                 <li><a href="Contact.aspx"><%=menu.Blog%></a></li>
                 <li><a href="Gallery.aspx"><%=menu.Contact%></a></li>
@@ -34,7 +34,7 @@
                 <div class="column">
                     <p style="text-decoration: underline;"><%=contact.text3 %> </p>
                     <p><%=contact.text4 %> </p>
-                    <br>
+                    <br/>
                     <p style="text-decoration: underline;"><%=contact.text5 %> </p>
                     <p><%=contact.text6 %> </p>
                     <p><%=contact.text7 %> </p>
@@ -44,17 +44,19 @@
                     <p><%=contact.text10 %> </p>
                 </div>
                 <div class="column">
-                    <form>
+                    <form id="form1" runat="server">
 
-                        <input type="text" id="name" name="name" placeholder="Your name.." />  <%--name tab--%>
+                        <div>
 
-                        <input type="text" id="email" name="email" placeholder="Your email.." /> <%--email tab--%>
+                            <asp:TextBox ID="TxtTo" runat="server">to</asp:TextBox>
 
-                        <input type="text" id="phone" name="phone" placeholder="Your phone number.." /> <%--phone tab--%>
+                            <asp:TextBox ID="txtSubject" runat="server">subject</asp:TextBox>
 
-                        <textarea id="subject" name="subject" placeholder="Write something.." style="height: 170px"></textarea>
-                        <input type="submit" value="Send" onclick="validate()" />
-                        <input type="submit" value="Clear" />
+                            <asp:TextBox ID="txtMessage" runat="server" Height="313px" Width="474px">message</asp:TextBox>
+
+                            <asp:Button ID="btnSend" runat="server" OnClick="btnSend_Click" Text="send" />
+
+                        </div>
 
                     </form>
                 </div>

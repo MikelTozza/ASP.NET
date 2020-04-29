@@ -45,6 +45,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -54,6 +57,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -61,6 +65,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -68,6 +73,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin.aspx" />
+    <Content Include="AdminEmail.aspx" />
+    <Content Include="boot\css\bootstrap-grid.css" />
+    <Content Include="boot\css\bootstrap-grid.min.css" />
+    <Content Include="boot\css\bootstrap-reboot.css" />
+    <Content Include="boot\css\bootstrap-reboot.min.css" />
+    <Content Include="boot\css\bootstrap.css" />
+    <Content Include="boot\css\bootstrap.min.css" />
+    <Content Include="boot\css\customlogin.css" />
+    <Content Include="boot\js\bootstrap.bundle.js" />
+    <Content Include="boot\js\bootstrap.bundle.min.js" />
+    <Content Include="boot\js\bootstrap.js" />
+    <Content Include="boot\js\bootstrap.min.js" />
+    <Content Include="css\grid.css" />
+    <Content Include="css\inscription.css" />
+    <Content Include="Inscription.aspx" />
+    <Content Include="LoginPage.aspx" />
     <Content Include="App_Data\TourismDataBase.mdf" />
     <Content Include="App_Data\TourismDataBase_log.ldf">
       <DependentUpon>TourismDataBase.mdf</DependentUpon>
@@ -86,11 +108,41 @@
     <Content Include="images\zebra.jpg" />
     <Content Include="js\contact.js" />
     <Content Include="js\gallery.js" />
+    <Content Include="Voyages.aspx" />
     <Content Include="Web.config" />
     <Content Include="Home.aspx" />
     <Content Include="Gallery.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEmail.aspx.cs">
+      <DependentUpon>AdminEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminEmail.aspx.designer.cs">
+      <DependentUpon>AdminEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Email.cs" />
+    <Compile Include="Inscription.aspx.cs">
+      <DependentUpon>Inscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inscription.aspx.designer.cs">
+      <DependentUpon>Inscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -114,9 +166,39 @@
     <Compile Include="Gallery.aspx.designer.cs">
       <DependentUpon>Gallery.aspx</DependentUpon>
     </Compile>
+    <Compile Include="userGateway.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>userGateway.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Voyages.aspx.cs">
+      <DependentUpon>Voyages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Voyages.aspx.designer.cs">
+      <DependentUpon>Voyages.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="boot\css\bootstrap-grid.css.map" />
+    <Content Include="boot\css\bootstrap-grid.min.css.map" />
+    <Content Include="boot\css\bootstrap-reboot.css.map" />
+    <Content Include="boot\css\bootstrap-reboot.min.css.map" />
+    <Content Include="boot\css\bootstrap.css.map" />
+    <Content Include="boot\css\bootstrap.min.css.map" />
+    <Content Include="boot\js\bootstrap.bundle.js.map" />
+    <Content Include="boot\js\bootstrap.bundle.min.js.map" />
+    <Content Include="boot\js\bootstrap.js.map" />
+    <Content Include="boot\js\bootstrap.min.js.map" />
     <None Include="packages.config" />
+    <Content Include="userGateway.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>userGateway.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="userGateway.dbml.layout">
+      <DependentUpon>userGateway.dbml</DependentUpon>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -124,7 +206,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

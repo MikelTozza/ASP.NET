@@ -31,10 +31,10 @@
         <nav>
             <ul>
                 <li><a href="Home.aspx"><%=menu.About%></a></li>
-                <li><a href="Gallery.aspx"><%=menu.Pages%></a></li>
+                <li><a href="Voyages.aspx"><%=menu.Pages%></a></li>
                 <li><a href="Gallery.aspx"><%=menu.Gallery%></a></li>
-                <li><a href="Gallery.aspx"><%=menu.Blog%></a></li>
-                <li><a href="Contact.aspx"><%=menu.Contact%></a></li>
+                <li><a href="Contact.aspx"><%=menu.Blog%></a></li>
+                <li><a href="Gallery.aspx"><%=menu.Contact%></a></li>
             </ul>
         </nav>
 
